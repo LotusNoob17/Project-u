@@ -1,24 +1,30 @@
-import {loginauth} from "../controller/firebase.js"
-const recibir = document.getElementById('loginbtn')
+import { loginauth } from "../controller/firebase.js";
 
-async function validar(){
-    const email = document.getElementById('username').value
-    const password = document.getElementById('userpassword').value
+const recibir = document.getElementById('loginbtn');
 
-    const verificar = loginauth(email, password)
-    const validation = await verificar
+async function validar() {
+    const email = document.getElementById('username').value;
+    const password = document.getElementById('userpassword').value;
 
-    if(validation != null){
-        alert("User authentication succesfull "+email)
-        window.location.href="../templates/home.html"
-
-    } else{
-        console.log("Sesion" +email+ "not validation")
-        alert("Error usuario")
-
+    if (email.trim() === '' || password.trim() === '') {
+        alert("Por favor, ingresa tu correo electrónico y contraseña.");
+        return; 
     }
-}    
-window.addEventListener('DOMContentLoaded',async()=>{
-    recibir.addEventListener('click',validar)
-})   
+
+    const verificar = loginauth(email, password);
+    const validation = await verificar;
+
+    if (validation != null) {
+        alert("Autenticación de usuario exitosa: " + email);
+        window.location.href = "../templates/home.html";
+    } else {
+        console.log("Sesión " + email + " no validada");
+        alert("Usuario o contraseña incorrectos.");
+        
+    }
+}
+
+window.addEventListener('DOMContentLoaded', async () => {
+    recibir.addEventListener('click', validar);
+});
 
