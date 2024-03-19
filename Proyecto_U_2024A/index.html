@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../style/styles.css"/>
+</head>
+<body>
+    <div class="login-container">
+        <div class="title-container">
+            <h2>Iniciar Sesión</h2>
+        </div>
+        <div class="Username-Password">
+            <input type="email" id="username" placeholder="Usuario">
+            <input type="password" id="userpassword" placeholder="Contraseña">
+        </div>
+        <div class="Login">
+            <button class="btn" id="loginbtn">Iniciar Sesión</button> 
+        </div>
+        <div class="New-forgot">
+            <a href="#" onclick="registrarusuario()"> ¿Tienes una cuenta?</a>
+            <a href="#" onclick="olvidasteContrasena()">¿Olvidaste tu contraseña?</a>
+        </div>
+    </div>
+    <script type="module" src="../controller/authentication.js"></script>
+</body>
+</html>
