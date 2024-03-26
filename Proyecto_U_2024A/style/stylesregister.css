@@ -3,19 +3,19 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('../resource/images/background.jpg');
+    background-image: url('../resource/images/background1.jpg');
     background-size: cover;
     background-position: center;
     margin: 0;
 }
 
-.login-container {
+.register-container {
     background-color: rgba(212, 230, 238, 0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    height: 280px;
+    height: 370px;
     width: 100%;
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 .Username-Password {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 label {
@@ -40,7 +40,7 @@ input {
     box-sizing: border-box;
 }
 
-.Login {
+.Register {
     margin-bottom: 12px; 
     
 }
@@ -59,19 +59,3 @@ button:hover {
     background-color: #59676c;
 }
 
-
-.New-forgot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.New-forgot a {
-    text-decoration: none;
-    color: #000000;
-}
-
-.New-forgot a:hover {
-    text-decoration: underline;
-    color: #000000;
-}

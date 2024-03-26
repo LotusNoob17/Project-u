@@ -28,3 +28,5 @@ window.addEventListener('DOMContentLoaded', async () => {
     recibir.addEventListener('click', validar);
 });
 
+
+
